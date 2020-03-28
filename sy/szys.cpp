@@ -145,6 +145,7 @@ int test(int n)
 	else 
 	{
 		printf("做错了！\n");
+		printf("正确答案是%d\n",ranswer);
 		return 0;
 	}
 }
