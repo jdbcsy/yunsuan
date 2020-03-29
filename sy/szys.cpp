@@ -78,15 +78,12 @@ int test(int n)
 		case 1:
 			operation='+';
 			break;
-
 		case 2:
 			operation='-';
 			break;
-
 		case 3:
 			operation='*';
 			break;
-
 		case 4:
 			operation='/';
 			break;
@@ -154,8 +151,6 @@ int test(int n)
 int main(void)
 {
 	int choice=0;		//接收用户的选择
-	
-	
 	
 	//循环开始功能，本次用do……while循环
 	do
