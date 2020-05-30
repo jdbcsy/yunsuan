@@ -4,5 +4,5 @@
 3、课题及仓库：四则运算 https://github.com/jdbcsy/yunsuan
 
 4.仓库中，代码.cpp是本实验所用的代码。测试代码包含其中
-miniunit.h是是采用的实验用例。
+miniunit.h是是采用的测试用例。
 测试结果.png是生成的测试结果
