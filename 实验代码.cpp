@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "miniunit.h"
+
 
 //函数原型
 int getChoice();
 void showMenu();
 void doExercise(int);
 int test(int);
+
+int score=0;//练习得分，初始化为0
 
 /*
 	功能：用户选择功能
@@ -40,7 +44,7 @@ void showMenu()
 */
 void doExercise(int n)
 {
-	int score=0;		//练习得分，初始化为0
+	 score=0;		//练习得分，初始化为0
 	int i=0;			//练习题数的计数器
 system("cls");
 	switch(n){
@@ -61,12 +65,20 @@ system("cls");
 			break;
 
 	}
+	
 	for(i=1;i<=10;i++)
 	{
-		score=score+test(n);		//间接递归调用test(n)
+		mu_run_test(test(n));
+	
+			//间接递归调用test(n)
 	}
 	printf("本次练习十道题，你做对了%d道\n",score);
+	
+	
 
+ // 	mu_run_test(test(n));
+  	mu_test_results();
+  	
 	printf("回车返回菜单\n");
 	getchar();
 	getchar();
@@ -142,6 +154,7 @@ int test(int n)
 	{
 		case '+':
 		ranswer=num1+num2;
+		
 		break;
 		case '-':
 		ranswer=num1-num2;
@@ -153,18 +166,23 @@ int test(int n)
 		ranswer=num1/num2;
 		break;
 	}
+	mu_assert(uanswer==ranswer,"should be %d", ranswer); 
+	
+	
 //评判，做对返回1，做错返回0
 	if(uanswer==ranswer)
 	{
 		printf("做对了！\n");
-		return 1;
-	}
-	else 
-	{
-		printf("做错了！\n");
-		printf("正确答案是%d\n",ranswer);
+		
+		score++;
 		return 0;
 	}
+//	else 
+//	{
+//		printf("做错了！\n");
+//		printf("正确答案是%d\n",ranswer);
+//		return 1;
+//	}
 }
 
 

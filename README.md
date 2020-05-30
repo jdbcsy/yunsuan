@@ -3,5 +3,6 @@
 　　　　　　　　　 3170701104 王振（https://www.cnblogs.com/wshu221/）
 3、课题及仓库：四则运算 https://github.com/jdbcsy/yunsuan
 
-4.仓库中，实验代码.cpp是本实验所用的代码。
-实验项目文件夹是VC++6.0所生成的项目文件
+4.仓库中，代码.cpp是本实验所用的代码。测试代码包含其中
+miniunit.h是是采用的实验用例。
+测试结果.png是生成的测试结果
